@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    {% include 'base/head.html' %}
+    <body class="u-theme--denim">
+        <div class="l-wrap">
+            <div class="l-wrap__content l-content" role="document">
+                {% include 'base/header.html' %}
+                {% include 'base/drawer.html' %}
+                {% block body %}
+
+                {% endblock %}
+            {% include 'base/footer.html' %}
+            </div>
+            {% include 'base/aside.html' %}
+        </div>
+        {% include 'base/scripts.html' %}
+    </body>
+</html>
