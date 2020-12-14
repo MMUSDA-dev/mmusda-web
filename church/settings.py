@@ -28,7 +28,7 @@ SECRET_KEY = 'me22pc=!rx)*17h&)sb&h-)^tl9u0f+z(ifwlxtdla)ad%-9yp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'base',
     'news',
     'departments',
+    'dashboard',
+    'search',
+    'authenticate',
 ]
 
 MIDDLEWARE = [
@@ -74,7 +77,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'church.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
