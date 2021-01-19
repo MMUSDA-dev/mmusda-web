@@ -37,6 +37,10 @@ def login_request(request):
     )
 
 
+def signup(request):
+    return render(request, 'authenticate/signup.html')
+
+
 def logout_request(request):
     logout(request)
     messages.info(request, 'logged out successfully!')

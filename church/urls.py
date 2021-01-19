@@ -5,17 +5,16 @@ The `urlpatterns` list routes URLs to views. For more information please see:
 Examples:
 Function views
     1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+    2. Add a URL to urlpatterns:  path('', views.pages, name='pages')
 Class-based views
     1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='pages')
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
 from django.conf.urls import url, include
-
 from django.contrib import admin
 from django.urls import path, include
 from base import views as base_views
@@ -45,7 +44,11 @@ urlpatterns = [
     path('login/', authenticate_views.login_request, name='login'),
     path('logout/', authenticate_views.logout_request, name='logout'),
     path('signout/', authenticate_views.signout, name='signout'),
-    path('home/', authenticate_views.home, name='home')
+    path('pages/', authenticate_views.home, name='pages'),
+    path('signup/', authenticate_views.signup, name='signup'),
+
+    # news views
+    path('news/', news_view.news_home, name='news'),
 ]
 
 if settings.DEBUG:

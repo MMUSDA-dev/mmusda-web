@@ -1,0 +1,52 @@
+{% extends 'dashboard/home.html' %}
+{% load static %}
+
+{% block page_id %} Add User{% endblock page_id %}
+{% block dashboard_content %}
+
+<main class="d-flex w-100">
+    <div class="container d-flex flex-column">
+        <div class="row vh-100">
+            <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+                <div class="d-table-cell">
+
+                    <div class="text-center">
+                        <p class="lead">
+                            First, enter a username and password. Then, you’ll be able to edit more user options.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="m-sm-4">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Username</label>
+                                        <input class="form-control form-control-lg" type="text" name="username" placeholder="Enter Username" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input class="form-control form-control-lg" type="password" name="Password" placeholder="Enter your Password" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Password Confirmation</label>
+                                        <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter the same password as before, for verification." />
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <button type="submit" class="btn btn-lg btn-primary">Save</button>
+                                        <button type="submit" class="btn btn-lg btn-primary">Save and continue Editing</button>
+                                        <button type="submit" class="btn btn-lg btn-primary">Save and add Another</button>
+                                        <!-- <a href="index.html" class="btn btn-lg btn-primary">Sign up</a> -->
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock dashboard_content %}

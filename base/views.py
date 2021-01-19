@@ -5,12 +5,13 @@ from . import models
 
 # Create your views here.
 def index(request):
-    return render(request, 'home/index.html')
+    # return HttpResponse('hello')
+    return render(request, 'base/pages/index.html')
 
 
 def about(request):
-    return render(request, 'home/about.html')
+    return render(request, 'base/pages/about.html')
 
 
 def contact(request):
-    return render(request, 'home/contact.html')
+    return render(request, 'base/pages/contact.html')

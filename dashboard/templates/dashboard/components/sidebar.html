@@ -20,12 +20,6 @@
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="">
-                  <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="">
                   <i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">Invoice</span>
                 </a>
             </li>
@@ -38,11 +32,11 @@
 
             <li class="sidebar-item">
                 <a href="#auth" data-toggle="collapse" class="sidebar-link collapsed">
-                  <i class="align-middle" data-feather="users"></i> <span class="align-middle">Auth</span>
+                  <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
                 </a>
                 <ul id="auth" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                     <li class="sidebar-item"><a class="sidebar-link" href="">Sign In</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="">Sign Up</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{% url 'signup' %}">Sign Up</a></li>
                 </ul>
             </li>
         </ul>

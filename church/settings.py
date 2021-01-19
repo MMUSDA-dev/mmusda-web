@@ -63,7 +63,7 @@ ROOT_URLCONF = 'church.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'), 'templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'base/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'church.wsgi.application'
 
 DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'nwkc',
             'USER': 'postgres',
             'PASSWORD': 'admin',

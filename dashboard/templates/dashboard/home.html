@@ -1,6 +1,7 @@
 {% extends 'dashboard/layout.html' %}
 {% load static %}
 {% block title %}Administration | North West Kenya Conference{% endblock %}
+
 {% block dashboard_body %}
     <div class="wrapper">
     {% include 'dashboard/components/sidebar.html' %}
@@ -12,7 +13,7 @@
 
                             <div class="row mb-2 mb-xl-3">
                                 <div class="col-auto d-none d-sm-block">
-                                    <h3>Dashboard</h3>
+                                  <h3> {% block page_id %}Dashboard{% endblock page_id %}</h3>
                                 </div>
 
                                 <div class="col-auto ml-auto text-right mt-n1">
