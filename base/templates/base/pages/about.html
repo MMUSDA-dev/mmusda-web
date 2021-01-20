@@ -37,17 +37,19 @@
                 <p class="o-caption u-color--gray u-font--secondary--s"></p>
             </figcaption>
         </figure> <!-- /.figure -->
-        <article class="text c-article__body u-spacing u-padding--top u-padding--bottom ">
-            <div class="c-block__heading u-theme--border-color--darker">
-                <h3 class="c-block__heading-title u-theme--color--darker">About North West Kenya Conference</h3>
-            </div>
-            <p><strong>North west Kenya confernce (NWKC),</strong> was established in the year 2012 as a pilot conference. it was before, part of the greater western Kenya Conference whose head quaters was based in Eldoret town. NWKC is based in Webuye off the Webuye-Kitale highway.</p>
-
-            <p><a href="">Vestibulum ipsum orci, egestas eu erat non, posuere maximus quam.</a> Quisque tincidunt turpis id accumsan hendrerit. Cras eleifend, arcu sit amet faucibus blandit, dolor urna euismod sem, non molestie nulla nulla porta nibh. Integer commodo arcu vitae nisl iaculis, non hendrerit arcu sodales. Vivamus sagittis quam ut elit posuere ultrices. In blandit erat orci, vitae posuere enim vehicula quis. Nullam posuere mauris odio, eu facilisis lorem iaculis ut. Aenean tortor turpis, sollicitudin ut est eget, mattis feugiat arcu. Etiam est magna, aliquet ut blandit sit amet, malesuada a lacus. Nam scelerisque arcu non sem auctor molestie. Vestibulum sit amet congue ex.</p>
-        </article>
+        {%if latest_description %}
+        {% for description in latest_description %}
+          <article class="text c-article__body u-spacing u-padding--top u-padding--bottom ">
+              <div class="c-block__heading u-theme--border-color--darker">
+                  <h3 class="c-block__heading-title u-theme--color--darker">{{ description.title }}</h3>
+              </div>
+              <p>{{ description.content }} </p>
+          </article>
+          {% endfor %}
+        {% else %}
+            <p>No data available</p>
+        {% endif %}
 
     </div>
 </section>
-
-
 {% endblock %}
