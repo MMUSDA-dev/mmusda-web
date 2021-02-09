@@ -4,6 +4,28 @@ from django.db import models
 # Create your models here.
 class Description(models.Model):
     title = models.CharField(max_length=200)
-    content = models.TextField(max_length=255)
+    content = models.TextField()
 
-    verbose_plural = 'Description'
+    class Meta:
+        verbose_name_plural = ' About page'
+
+class IndexDescription(models.Model):
+    title = models.CharField(max_length=200)
+    content_key = models.TextField()
+    content_extra = models.TextField()
+    pub_date = models.DateField('date Published', null=True)
+    pub_by = models.CharField('Published By', max_length=200, blank=True)
+    image = models.ImageField(upload_to= 'media/')
+
+    class Meta:
+        verbose_name_plural = 'Index Description'
+
+
+class Carousel(models.Model):
+    title = models.CharField(max_length=200, blank=True)
+    subtitle = models.CharField(max_length=200, blank=True)
+    content = models.CharField(max_length=255, blank= True)
+    image = models.ImageField(upload_to = 'meddia/carousel/')
+
+    class Meta:
+        verbose_name_plural = 'Carousel'

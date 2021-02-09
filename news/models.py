@@ -5,6 +5,12 @@ from django.db import models
 class News(models.Model):
     title = models.CharField(max_length=200)
     subtitle = models.CharField(max_length=200, blank=True)
-    description = models.TextField
+    content = models.TextField()
     pub_date = models.DateField('date Published')
-    pub_by = models.CharField(max_length=200, blank=True)
+    pub_by = models.CharField('Published By', max_length=200, blank=True)
+
+    class Meta:
+        verbose_name_plural = 'News'
+
+
+    

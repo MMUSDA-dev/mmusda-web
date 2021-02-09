@@ -28,28 +28,29 @@
 </header>
 
 <section class="l-grid l-grid--7-col u-shift--left--1-col--at-xxlarge l-grid-wrap--6-of-7 u-spacing--double--until-large">
-    <div class="c-article l-grid-item l-grid-item--l--4-col l-grid-item--xl--4-col">
-        <figure class="o-figure u-padding--double--top ">
-            <div class="u-image--wrap fitvid">
-                <iframe title="A People Connected // Adventist.org" src="https://player.vimeo.com/video/85957049?dnt=1&amp;app_id=122963" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" id="fitvid882350"></iframe>
-            </div> <!-- /.u-image--wrap -->
-            <figcaption class="o-figcaption">
-                <p class="o-caption u-color--gray u-font--secondary--s"></p>
-            </figcaption>
-        </figure> <!-- /.figure -->
-        {%if latest_description %}
+  <div class="c-article l-grid-item l-grid-item--l--4-col l-grid-item--xl--4-col">
+    <figure class="o-figure u-padding--double--top ">
+        <div class="u-image--wrap fitvid">
+            <iframe title="A People Connected // Adventist.org" src="https://player.vimeo.com/video/85957049?dnt=1&amp;app_id=122963" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" id="fitvid882350"></iframe>
+        </div> <!-- /.u-image--wrap -->
+        <figcaption class="o-figcaption">
+            <p class="o-caption u-color--gray u-font--secondary--s"></p>
+        </figcaption>
+    </figure> <!-- /.figure -->
+    <article class="text c-article__body u-spacing u-padding--top u-padding--bottom ">
+      {% if latest_description %}
         {% for description in latest_description %}
-          <article class="text c-article__body u-spacing u-padding--top u-padding--bottom ">
-              <div class="c-block__heading u-theme--border-color--darker">
-                  <h3 class="c-block__heading-title u-theme--color--darker">{{ description.title }}</h3>
-              </div>
-              <p>{{ description.content }} </p>
-          </article>
-          {% endfor %}
-        {% else %}
-            <p>No data available</p>
-        {% endif %}
-
-    </div>
+          <div class="c-block__heading u-theme--border-color--darker">
+              <h3 class="c-block__heading-title u-theme--color--darker">{{ description.title }}</h3>
+          </div>
+          <p>{{ description.content }} </p>
+        {% endfor %}
+      {% else %}
+        <div class="c-block__heading u-theme--border-color--base">
+          <h3 class="c-block__heading-title u-theme--color--base">No data available</h3>
+        </div>
+      {% endif %}
+    </article>
+  </div>
 </section>
 {% endblock %}

@@ -1,5 +1,6 @@
 {% extends 'dashboard/layout.html' %}
 {% load static %}
+{% block title%} Logged out{% endblock title%}
 {% block dashboard_body %}
 <main class="d-flex w-100 approve">
     <div class="container d-flex flex-column">
@@ -17,7 +18,7 @@
                                     <p>Thank You for spending some quality time with the website today</p>
                                     <hr>
                                     <p class="mb-3">
-                                        If you wish to continue continue,
+                                        If you wish to continue,
                                     </p>
                                     <a href="{% url 'login' %}" class="btn btn-primary">Log in again</a>
                                 </div>

@@ -26,7 +26,7 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f'you are now logged in as {username}')
-                return redirect('dashboard_home')
+                return redirect('/admin/')
             else:
                 messages.error(request, 'invalid username or password')
         else:

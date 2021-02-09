@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'church.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'nwkc',
+            'NAME': 'church',
             'USER': 'postgres',
             'PASSWORD': 'admin',
             'HOST': 'localhost',
@@ -142,3 +142,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'base/static/')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+LOGIN_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = 'signout' 
