@@ -7,7 +7,7 @@ class Description(models.Model):
     content = models.TextField()
 
     class Meta:
-        verbose_name_plural = ' About page'
+        verbose_name_plural = ' About page contents'
 
 class IndexDescription(models.Model):
     title = models.CharField(max_length=200)
@@ -18,14 +18,16 @@ class IndexDescription(models.Model):
     image = models.ImageField(upload_to= 'media/')
 
     class Meta:
-        verbose_name_plural = 'Index Description'
+        verbose_name_plural = 'Home page contents'
+    
+    def __str__(self):
+        return self.title
 
+# class Carousel(models.Model):
+#     title = models.CharField(max_length=200, blank=True)
+#     subtitle = models.CharField(max_length=200, blank=True)
+#     content = models.CharField(max_length=255, blank= True)
+#     image = models.ImageField(upload_to = 'meddia/carousel/')
 
-class Carousel(models.Model):
-    title = models.CharField(max_length=200, blank=True)
-    subtitle = models.CharField(max_length=200, blank=True)
-    content = models.CharField(max_length=255, blank= True)
-    image = models.ImageField(upload_to = 'meddia/carousel/')
-
-    class Meta:
-        verbose_name_plural = 'Carousel'
+#     class Meta:
+#         verbose_name_plural = 'Carousel'

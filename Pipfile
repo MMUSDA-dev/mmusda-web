@@ -5,10 +5,21 @@ name = "pypi"
 
 [packages]
 requests = "*"
+resources = "*"
+asgiref = "*"
+certifi = "*"
+chardet = "*"
+idna = "*"
+psycopg2 = "*"
+pytz = "*"
+sqlparse = "*"
+urllib3 = "*"
+Django = "*"
+Pillow = "*"
+psycopg2-binary = "*"
+django = "*"
 
 [dev-packages]
 
-
-
 [requires]
-python_version = "3.8"
+python_version = "3.9"

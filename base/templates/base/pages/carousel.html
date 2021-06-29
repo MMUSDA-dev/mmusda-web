@@ -5,47 +5,14 @@
     <div class="c-carousel u-position--relative ">
         <div class="c-carousel__slides js-carousel__single-item">
             
-            
-            <!-- /.c-carousel__item -->
-            {% if carousel_view %}
-            {% for view in carousel_view %}
             <div class="c-carousel__item u-position--relative ">
                 <picture class="picture">
                     <!--[if IE 9]><video style="display: none;"><![endif]-->
-                    <source srcset="{{ view.image }}" media="(min-width: 900px)">
-                    <source srcset="{{ view.image }}" media="(min-width: 700px)">
-                    <source srcset="{{ view.image }}" media="(min-width: 500px)">
+                    <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 900px)">
+                    <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 700px)">
+                    <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 500px)">
                     <!--[if IE 9]></video><![endif]-->
-                  <img itemprop="image" srcset="{{ view.image }}" alt="Alt Text">
-                </picture>
-                <div class="c-carousel__item-text__wrap l-grid l-grid--7-col u-shift--left--1-col--at-large">
-                    <div class="l-grid-item l-grid-item--m--4-col l-grid-item--xl--3-col">
-                        <div class="c-carousel__item-text  u-spacing u-padding--double--top u-padding--double--bottom">
-                            <div class="c-carousel__item-text--inner u-spacing--half">
-                                <h2 class="c-carousel__item-heading u-font--primary--xl">{{view.title}</h2>
-                                <h3 class="c-carousel__item-subtitle u-font--secondary--s u-text-transform--upper">
-                                    <strong> {{ view.subtitle}} </strong>
-                                </h3>
-                                <div class="c-carousel__item-dek">
-                                    <p>{{ view.content }} </p>
-                                </div>
-                                <!-- /.c-carousel__item-dek -->
-                          </div>            
-                        </div>
-                    <!-- /.c-carousel__item-text -->
-                  </div>
-                </div>
-            </div>
-            {% endfor%}
-            {% else %}
-            <div class="c-carousel__item u-position--relative ">
-                <picture class="picture">
-                    <!--[if IE 9]><video style="display: none;"><![endif]-->
-                    <source srcset="{% static 'images/I_will_go_logo-1600.jpg' %}" media="(min-width: 900px)">
-                    <source srcset="{% static 'images/I_will_go_logo-1600.jpg' %}" media="(min-width: 700px)">
-                    <source srcset="{% static 'images/I_will_go_logo-1600.jpg' %}" media="(min-width: 500px)">
-                    <!--[if IE 9]></video><![endif]-->
-                    <img itemprop="image" srcset="{% static 'images/I_will_go_logo-1600.jpg' %}" alt="Alt Text">
+                    <img itemprop="image" srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" alt="Alt Text">
                 </picture>
                 <div class="c-carousel__item-text__wrap l-grid l-grid--7-col u-shift--left--1-col--at-large">
                     <div class="l-grid-item l-grid-item--m--4-col l-grid-item--xl--3-col">
@@ -56,7 +23,46 @@
                     </div>
                 </div>
             </div>
-            {% endif %}
+            <!-- /.c-carousel__item -->
+
+            <div class="c-carousel__item u-position--relative ">
+                <picture class="picture">
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                    <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 900px)">
+                    <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 700px)">
+                    <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 500px)">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img itemprop="image" srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" alt="Alt Text">
+                </picture>
+                <div class="c-carousel__item-text__wrap l-grid l-grid--7-col u-shift--left--1-col--at-large">
+                    <div class="l-grid-item l-grid-item--m--4-col l-grid-item--xl--3-col">
+                        <div class="c-carousel__item-text carousel__item--right u-spacing u-padding--double--top u-padding--double--bottom">
+                            
+                        </div>
+                        <!-- /.c-carousel__item-text -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.c-carousel__item -->
+            
+            <div class="c-carousel__item u-position--relative ">
+                <picture class="picture">
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                    <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 900px)">
+                    <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 700px)">
+                    <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 500px)">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img itemprop="image" srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" alt="Alt Text">
+                </picture>
+                <div class="c-carousel__item-text__wrap l-grid l-grid--7-col u-shift--left--1-col--at-large">
+                    <div class="l-grid-item l-grid-item--m--4-col l-grid-item--xl--3-col">
+                        <div class="c-carousel__item-text carousel__item--right u-spacing u-padding--double--top u-padding--double--bottom">
+                            
+                        </div>
+                        <!-- /.c-carousel__item-text -->
+                    </div>
+                </div>
+            </div>
             <!-- /.c-carousel__item -->           
         </div>
     </div>

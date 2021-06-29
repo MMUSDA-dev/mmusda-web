@@ -39,6 +39,13 @@
         <div class="c-header__nav-primary">
             <nav class="c-primary-nav c-priority-nav" role="navigation">
                 <ul class="c-primary-nav__list c-priority-nav__list">
+
+                    <li class="c-primary-nav__list-item has-subnav">
+                        <a href="/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
+                        Home
+                        </a>
+                    </li>
+
                     <li class="c-primary-nav__list-item">
                         <a href="https://www.adventist.org/beliefs/fundamental-beliefs/" target="_blank" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base this-is-active">
                         Beliefs
@@ -70,12 +77,31 @@
                             <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
                                 <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="">Administration</a>
                             </li>
-                            <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
+                            
+                            <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark has-subnav js-this">
                                 <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="">Ministries and Services</a>
+                                <span class="c-primary-nav__subnav__arrow c-subnav__arrow o-arrow--down u-path-fill--gray js-toggle" data-toggled="this" data-prefix="this"></span> 
+                                <ul class="c-primary-nav__subnav__subnav c-subnav">
+                                    <li class="c-primary-nav__subnav__subnav__list-item c-subnav__list-item u-theme--background-color--base">
+                                    <a class="c-primary-nav__subnav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--lighter" href="">Atlantic Union</a>
+                                    </li>
+                                    <li class="c-primary-nav__subnav__subnav__list-item c-subnav__list-item u-theme--background-color--base">
+                                    <a class="c-primary-nav__subnav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--lighter" href="">Canadian Union</a>
+                                    </li>
+                                    <li class="c-primary-nav__subnav__subnav__list-item c-subnav__list-item u-theme--background-color--base">
+                                    <a class="c-primary-nav__subnav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--lighter" href="">Columbia Union</a>
+                                    </li>
+                                    <li class="c-primary-nav__subnav__subnav__list-item c-subnav__list-item u-theme--background-color--base">
+                                    <a class="c-primary-nav__subnav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--lighter" href="">Lake Union</a>
+                                    </li>
+                                </ul>
+                                
                             </li>
                         </ul>
 
                     </li>
+                    
+                        
                     <li class="c-primary-nav__list-item has-subnav">
                         <a href="{% url 'about' %}" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
                         About

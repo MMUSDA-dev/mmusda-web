@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout, authenticate, login
+from django.contrib.auth import logout, authenticate, login, get_user_model
+from django.contrib.auth.backends import ModelBackend
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.models import User
 from dashboard.views import dashboard_home
@@ -9,6 +10,7 @@ from django.contrib import messages
 
 
 # Create your views here.
+
 def home(request):
     if request.user.is_authenticated:
         return dashboard_home(request)
@@ -28,9 +30,9 @@ def login_request(request):
                 messages.info(request, f'you are now logged in as {username}')
                 return redirect('/admin/')
             else:
-                messages.error(request, 'invalid username or password')
+                messages.error(request, 'Please enter the correct username and password. Note that both fields are case-sensitive.')
         else:
-            messages.error(request, 'invalid username or password')
+            messages.error(request, 'Please enter the correct username and password. Note that both fields are case-sensitive.')
     form = AuthenticationForm()
     return render(
         request, 'authenticate/signin.html', {"forms": form}
@@ -43,8 +45,7 @@ def signup(request):
 
 def logout_request(request):
     logout(request)
-    messages.info(request, 'logged out successfully!')
-    return redirect('signout')
+    return redirect(request.messages.info(request, 'You have logged out successfully!'), 'signout')
 
 
 def signout(request):
