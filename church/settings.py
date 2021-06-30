@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from django.core.management import templates
@@ -28,7 +29,7 @@ SECRET_KEY = 'me22pc=!rx)*17h&)sb&h-)^tl9u0f+z(ifwlxtdla)ad%-9yp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'frymn-church.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -147,3 +148,5 @@ LOGIN_REDIRECT_URL = 'login'
 LOGOUT_REDIRECT_URL = 'signout' 
 
 # AUTHENTICATION_BACKENDS = ['path.to.auth.module.EmailBackend']
+
+django_heroku.settings(locals())

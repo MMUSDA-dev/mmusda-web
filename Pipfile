@@ -19,6 +19,7 @@ Pillow = "*"
 psycopg2-binary = "*"
 django = "*"
 gunicorn = "*"
+django-heroku = "*"
 
 [dev-packages]
 
