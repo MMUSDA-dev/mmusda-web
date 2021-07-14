@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+# from django.shortcuts import render
+# from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, authenticate, login, get_user_model
 from django.contrib.auth.backends import ModelBackend
 from django.shortcuts import get_object_or_404, redirect, render
