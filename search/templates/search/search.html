@@ -4,55 +4,291 @@
 
 {% block body %}
 
-    <div class="c-filter u-spacing u-background-color--gray--light u-padding u-theme--border-color--darker u-border--left can-be--dark-dark">
-    <form action="" role="search" method="get" class="c-filter__search">
-        <div class="l-field-container u-spacing">
-            <input type="search" name="s" class="u-font--secondary--s u-color--gray" value="Search..."/>
-            <div class="u-flex">
-                <button class="c-filter__button o-button o-button--outline u-space--right">
-                <span class="u-icon u-icon--xs u-path-fill--base"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__search</title><path d="M9.91,8.5,7.43,6A4,4,0,1,0,4,8a4,4,0,0,0,2-.57L8.5,9.91ZM2,4A2,2,0,1,1,4,6,2,2,0,0,1,2,4Z" fill="#777"/></svg>
-                </span>Search</button>
-
-                <span class="c-filter__toggle js-toggle o-button o-button--simple" data-toggled="c-filter" data-prefix="c-filter"><span class="u-icon u-icon--xs u-theme--path-fill--base"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14"><title>Pattern Lab Tools</title><path fill="#808080" d="M12.767 8.343c-0.735-1.272-0.293-2.903 0.986-3.643l-1.376-2.383c-0.393 0.23-0.85 0.363-1.338 0.363-1.47 0-2.662-1.2-2.662-2.68h-2.752c0.004 0.457-0.11 0.92-0.355 1.343-0.735 1.272-2.367 1.705-3.649 0.967l-1.376 2.383c0.396 0.225 0.739 0.555 0.983 0.977 0.733 1.27 0.294 2.897-0.98 3.64l1.376 2.383c0.392-0.228 0.847-0.359 1.332-0.359 1.466 0 2.654 1.192 2.662 2.665h2.752c-0.001-0.452 0.113-0.91 0.355-1.329 0.733-1.27 2.362-1.703 3.642-0.971l1.376-2.383c-0.393-0.225-0.734-0.554-0.977-0.974zM7 9.835c-1.566 0-2.835-1.269-2.835-2.835s1.269-2.835 2.835-2.835c1.566 0 2.835 1.269 2.835 2.835s-1.269 2.835-2.835 2.835z"></path></svg>
-                </span></span>
-            </div>
+<main class="l-main u-padding--double--bottom" role="main">
+    <header class="c-page-header c-page-header__simple u-theme--background-color--dark ">
+        <div class="c-page-header__simple--inner u-padding">
+            <h1 class="c-page-header__title u-font--primary--xxl u-color--white">
+            Search
+            </h1>
         </div>
-    </form>
-
-    <!-- <form class="c-filter__form u-spacing">
-        <div class="c-filter__form-item u-spacing--half">
+    </header> 
+    <div class="c-search-header u-background-color--gray--light can-be--dark-dark u-padding--double--top u-padding--double--bottom">
+        <div class="c-search-header__filter c-filter">
+            <form action="" role="search" method="" class="c-filter__search l-grid l-grid--7-col u-shift--left--1-col--at-large">
+                <div class="l-grid-item--7-col l-grid-item--m--3-col l-grid-item--l--3-col">
+                <input id="search-input" type="search" name="search" placeholder="Search..." class="u-font--secondary--s u-theme--color--darker can-be--white" />
+                </div>
+                <div class="l-grid-item--7-col l-grid-item--m--3-col l-grid-item--l--2-col">
+                <button class="c-filter__button o-button u-space--right">
+                <span class="u-icon u-icon--xs u-path-fill--base"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__search</title><path d="M9.91,8.5,7.43,6A4,4,0,1,0,4,8a4,4,0,0,0,2-.57L8.5,9.91ZM2,4A2,2,0,1,1,4,6,2,2,0,0,1,2,4Z" fill="#777"/></svg>
+                </span>Search
+                </button>
+                <button class="c-filter__toggle js-toggle o-button o-button--simple--gray" data-toggled="c-filter" data-prefix="c-filter">
+                <span class="u-icon u-icon--xs u-theme--path-fill--base"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14"><title>Pattern Lab Tools</title><path fill="#808080" d="M12.767 8.343c-0.735-1.272-0.293-2.903 0.986-3.643l-1.376-2.383c-0.393 0.23-0.85 0.363-1.338 0.363-1.47 0-2.662-1.2-2.662-2.68h-2.752c0.004 0.457-0.11 0.92-0.355 1.343-0.735 1.272-2.367 1.705-3.649 0.967l-1.376 2.383c0.396 0.225 0.739 0.555 0.983 0.977 0.733 1.27 0.294 2.897-0.98 3.64l1.376 2.383c0.392-0.228 0.847-0.359 1.332-0.359 1.466 0 2.654 1.192 2.662 2.665h2.752c-0.001-0.452 0.113-0.91 0.355-1.329 0.733-1.27 2.362-1.703 3.642-0.971l1.376-2.383c-0.393-0.225-0.734-0.554-0.977-0.974zM7 9.835c-1.566 0-2.835-1.269-2.835-2.835s1.269-2.835 2.835-2.835c1.566 0 2.835 1.269 2.835 2.835s-1.269 2.835-2.835 2.835z"></path></svg>
+                </span>
+                <font>F    <input id="search-input" type="search" name="search" placeholder="Search..." class="u-font--secondary--s u-theme--color--darker can-be--white" />
+                </div>
+                <div class="l-grid-item--7-col l-grid-item--m--3-col l-grid-item--l--2-col">
+                <button class="c-filter__button o-button u-space--right">
+                <span class="u-icon u-icon--xs u-path-fill--base"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__search</title><path d="M9.91,8.5,7.43,6A4,4,0,1,0,4,8a4,4,0,0,0,2-.57L8.5,9.91ZM2,4A2,2,0,1,1,4,6,2,2,0,0,1,2,4Z" fill="#777"/></svg>
+                </span>Search
+                </button>
+                <button class="c-filter__toggle js-toggle o-button o-button--simple--gray" data-toggled="c-filter" data-prefix="c-filter">
+                <span class="u-icon u-icon--xs u-theme--path-fill--base"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14"><title>Pattern Lab Tools</title><path fill="#808080" d="M12.767 8.343c-0.735-1.272-0.293-2.903 0.986-3.643l-1.376-2.383c-0.393 0.23-0.85 0.363-1.338 0.363-1.47 0-2.662-1.2-2.662-2.68h-2.752c0.004 0.457-0.11 0.92-0.355 1.343-0.735 1.272-2.367 1.705-3.649 0.967l-1.376 2.383c0.396 0.225 0.739 0.555 0.983 0.977 0.733 1.27 0.294 2.897-0.98 3.64l1.376 2.383c0.392-0.228 0.847-0.359 1.332-0.359 1.466 0 2.654 1.192 2.662 2.665h2.752c-0.001-0.452 0.113-0.91 0.355-1.329 0.733-1.27 2.362-1.703 3.642-0.971l1.376-2.383c-0.393-0.225-0.734-0.554-0.977-0.974zM7 9.835c-1.566 0-2.835-1.269-2.835-2.835s1.269-2.835 2.835-2.835c1.566 0 2.835 1.269 2.835 2.835s-1.269 2.835-2.835 2.835z"></path></svg>
+                </span>
+                <font>Filter</font>
+                </button>ilter</font>
+                </button>
+                </div>
+            </form>
+            <div class="c-search-header__filter-form l-grid l-grid--7-col u-shift--left--1-col--at-large">
+            <div class="l-grid-item--7-col l-grid-item--m--4-col l-grid-item--l--3-col">
+            <form class="c-filter__form u-spacing ">
+            <div class="c-filter__form-item u-spacing--half">
             <h3 class="u-font--secondary--s u-font-weight--bold u-text-transform--upper u-theme--color--base">Filter</h3>
             <div class="c-filter__form-group">
-                <input id="checkbox-1" type="checkbox" name="checkbox" value="Option 1"/>
-                <label for="checkbox-1">Option 1</label>
+            <input id="checkbox-1" type="checkbox" name="checkbox" value="Option 1"/>
+            <label for="checkbox-1">Option 1</label>
             </div>
             <div class="c-filter__form-group">
-                <input id="checkbox-2" type="checkbox" name="checkbox" value="Option 2"/>
-                <label for="checkbox-2">Option 2</label>
+            <input id="checkbox-2" type="checkbox" name="checkbox" value="Option 2"/>
+            <label for="checkbox-2">Option 2</label>
             </div>
-        </div>
-        <div class="c-filter__form-item u-spacing--half">
+            </div>
+            <div class="c-filter__form-item u-spacing--half">
             <h3 class="u-font--secondary--s u-font-weight--bold u-text-transform--upper u-theme--color--base">Sort By</h3>
             <div class="c-filter__form-group">
-                <input id="radio-1" type="radio" name="radio" value="Option 1"/>
-                <label for="radio-1">Option 1</label>
+            <input id="radio-1" type="radio" name="radio" value="Option 1"/>
+            <label for="radio-1">Option 1</label>
             </div>
             <div class="c-filter__form-group">
-                <input id="radio-2" type="radio" name="radio" value="Option 2"/>
-                <label for="radio-2">Option 2</label>
+            <input id="radio-2" type="radio" name="radio" value="Option 2"/>
+            <label for="radio-2">Option 2</label>
+            </div>
+            </div>
+            </form>
+            </div>
             </div>
         </div>
-    </form> -->
+    </div>
+    <section id="top" class="l-main__content l-grid l-grid--7-col u-shift--left--1-col--at-large l-grid-wrap--6-of-7 u-spacing--double--until-xxlarge u-padding--zero--sides u-space--double--top">
+    <article class="c-article l-grid-item l-grid-item--l--4-col">
+    <div class="c-article__body">
+    <div class="c-search-results u-spacing--double text">
+    <div class="c-media-block c-block c-block__row c-block--search l-grid-wrap u-border-left--black--at-small">
+    <div class="c-block__image l-grid-item l-grid-item--2-col l-grid-item--m--1-col">
+    <div class="c-block__image-outer-wrap">
+    <div class="c-block__image-wrap ">
+    <picture class="picture">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="//picsum.photos/450/450" media="(min-width: 500px)">
+    <!--[if IE 9]></video><![endif]-->
+    <img itemprop="image" srcset="//picsum.photos/600/330" alt="Alt Text">
+    </picture>
+    </div>
+    </div>
+    </div>
+
+    <div class="c-block__content u-spacing l-grid-item l-grid-item--4-col l-grid-item--m--3-col u-color--gray u-font--secondary">
+    <div class="u-spacing c-block__group ">
+    <div class="u-width--100p u-spacing">
+    <h3 class="c-block__title u-theme--color--darker u-font--primary--m ">
+    <a href="/" class="c-block__title-link u-theme--link-hover--dark">
+    Brazilian House of Representatives Discusses Law to Guarantee Test-free Saturdays
+    </a>
+    </h3>
+    <p class="c-block__description">Establishing that public testing and college entrance examinations should be carried out from Sunday through Friday</p>
+    </div>
+    <div class="c-block__meta u-theme--color--dark">
+    <span class="c-block__meta u-font--secondary--xs">This Site</span>
+    </div>
+    </div>
+    </div>
 
     </div>
-    <div class="c-block c-block__text  u-theme--border-color--darker u-border--left u-spacing">
-        <h3 class="u-theme--color--darker u-font--primary--m">
-            <strong>General Conference</strong>
-        </h3>
-        <p class="c-block__body text">Fusce interdum purus est, vel semper ex tristique ut. Proin dapibus luctus pellentesque. Duis et sapien sit amet enim porttitor gravida at non orci. Proin dictum lobortis luctus. Sed sagittis massa id blandit aliquet. Pellentesque semper tincidunt ex sit amet tincidunt. Cras at sem at felis rhoncus varius eget vel ipsum.</p>
-        <a href="" class="c-block__button o-button o-button--outline">Learning more<span class="u-icon u-icon--m u-path-fill--base u-space--half--left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>o-arrow__long--left</title><path d="M18.29,8.59l-3.5-3.5L13.38,6.5,15.88,9H.29v2H15.88l-2.5,2.5,1.41,1.41,3.5-3.5L19.71,10Z" fill="#9b9b9b"/></svg>
-        </span></a>
-        <div class="c-block__meta u-font--secondary--xs u-color--gray ">Source: www.adventist.org</div>
+
+    <div class="c-media-block c-block c-block__row c-block--search l-grid-wrap u-border-left--black--at-small">
+    <div class="c-block__image l-grid-item l-grid-item--2-col l-grid-item--m--1-col">
+    <div class="c-block__image-outer-wrap">
+    <div class="c-block__image-wrap ">
+    <picture class="picture">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="//picsum.photos/450/450" media="(min-width: 500px)">
+    <!--[if IE 9]></video><![endif]-->
+    <img itemprop="image" srcset="//picsum.photos/600/330" alt="Alt Text">
+    </picture>
     </div>
+    </div>
+    </div>
+
+    <div class="c-block__content u-spacing l-grid-item l-grid-item--4-col l-grid-item--m--3-col u-color--gray u-font--secondary">
+    <div class="u-spacing c-block__group ">
+    <div class="u-width--100p u-spacing">
+    <h3 class="c-block__title u-theme--color--darker u-font--primary--m ">
+    <a href="/" class="c-block__title-link u-theme--link-hover--dark">
+    World Church: Leaders Pray in Wake of Apparent North Korea Nuke Test
+    </a>
+    </h3>
+    <p class="c-block__description">Leaders of the Seventh-day Adventist world church united in prayer on Monday, October 9, in response to an apparent test of nuclear weapons by the Democratic People's Republic of Korea...</p>
+    </div>
+    <div class="c-block__meta u-theme--color--dark">
+    <span class="c-block__meta u-font--secondary--xs">Adventistreview.org</span>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    <div class="c-media-block c-block c-block__row c-block--search l-grid-wrap u-border-left--black--at-small">
+    <div class="c-block__image l-grid-item l-grid-item--2-col l-grid-item--m--1-col">
+    <div class="c-block__image-outer-wrap">
+    <div class="c-block__image-wrap ">
+    <picture class="picture">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="//picsum.photos/450/450" media="(min-width: 500px)">
+    <!--[if IE 9]></video><![endif]-->
+    <img itemprop="image" srcset="//picsum.photos/600/330" alt="Alt Text">
+    </picture>
+    </div>
+    </div>
+    </div>
+
+    <div class="c-block__content u-spacing l-grid-item l-grid-item--4-col l-grid-item--m--3-col u-color--gray u-font--secondary">
+    <div class="u-spacing c-block__group ">
+    <div class="u-width--100p u-spacing">
+    <h3 class="c-block__title u-theme--color--darker u-font--primary--m ">
+    <a href="/" class="c-block__title-link u-theme--link-hover--dark">
+    Brazilian House of Representatives Discusses Law to Guarantee Test-free Saturdays
+    </a>
+    </h3>
+    <p class="c-block__description">Establishing that public testing and college entrance examinations should be carried out from Sunday through Friday</p>
+    </div>
+    <div class="c-block__meta u-theme--color--dark">
+    <span class="c-block__meta u-font--secondary--xs">This Site</span>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    <div class="c-media-block c-block c-block__row c-block--search l-grid-wrap u-border-left--black--at-small">
+    <div class="c-block__image l-grid-item l-grid-item--2-col l-grid-item--m--1-col">
+    <div class="c-block__image-outer-wrap">
+    <div class="c-block__image-wrap ">
+    <picture class="picture">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="//picsum.photos/450/450" media="(min-width: 500px)">
+    <!--[if IE 9]></video><![endif]-->
+    <img itemprop="image" srcset="//picsum.photos/600/330" alt="Alt Text">
+    </picture>
+    </div>
+    </div>
+    </div>
+
+    <div class="c-block__content u-spacing l-grid-item l-grid-item--4-col l-grid-item--m--3-col u-color--gray u-font--secondary">
+    <div class="u-spacing c-block__group ">
+    <div class="u-width--100p u-spacing">
+    <h3 class="c-block__title u-theme--color--darker u-font--primary--m ">
+    <a href="/" class="c-block__title-link u-theme--link-hover--dark">
+    World Church: Leaders Pray in Wake of Apparent North Korea Nuke Test
+    </a>
+    </h3>
+    <p class="c-block__description">Leaders of the Seventh-day Adventist world church united in prayer on Monday, October 9, in response to an apparent test of nuclear weapons by the Democratic People's Republic of Korea...</p>
+    </div>
+    <div class="c-block__meta u-theme--color--dark">
+    <span class="c-block__meta u-font--secondary--xs">Adventistreview.org</span>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    <div class="c-media-block c-block c-block__row c-block--search l-grid-wrap u-border-left--black--at-small">
+    <div class="c-block__image l-grid-item l-grid-item--2-col l-grid-item--m--1-col">
+    <div class="c-block__image-outer-wrap">
+    <div class="c-block__image-wrap ">
+    <picture class="picture">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="//picsum.photos/450/450" media="(min-width: 500px)">
+    <!--[if IE 9]></video><![endif]-->
+    <img itemprop="image" srcset="//picsum.photos/600/330" alt="Alt Text">
+    </picture>
+    </div>
+    </div>
+    </div>
+
+    <div class="c-block__content u-spacing l-grid-item l-grid-item--4-col l-grid-item--m--3-col u-color--gray u-font--secondary">
+    <div class="u-spacing c-block__group ">
+    <div class="u-width--100p u-spacing">
+    <h3 class="c-block__title u-theme--color--darker u-font--primary--m ">
+    <a href="/" class="c-block__title-link u-theme--link-hover--dark">
+    Brazilian House of Representatives Discusses Law to Guarantee Test-free Saturdays
+    </a>
+    </h3>
+    <p class="c-block__description">Establishing that public testing and college entrance examinations should be carried out from Sunday through Friday</p>
+    </div>
+    <div class="c-block__meta u-theme--color--dark">
+    <span class="c-block__meta u-font--secondary--xs">This Site</span>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    <div class="c-media-block c-block c-block__row c-block--search l-grid-wrap u-border-left--black--at-small">
+    <div class="c-block__image l-grid-item l-grid-item--2-col l-grid-item--m--1-col">
+    <div class="c-block__image-outer-wrap">
+    <div class="c-block__image-wrap ">
+    <picture class="picture">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="//picsum.photos/450/450" media="(min-width: 500px)">
+    <!--[if IE 9]></video><![endif]-->
+    <img itemprop="image" srcset="//picsum.photos/600/330" alt="Alt Text">
+    </picture>
+    </div>
+    </div>
+    </div>
+
+    <div class="c-block__content u-spacing l-grid-item l-grid-item--4-col l-grid-item--m--3-col u-color--gray u-font--secondary">
+    <div class="u-spacing c-block__group ">
+    <div class="u-width--100p u-spacing">
+    <h3 class="c-block__title u-theme--color--darker u-font--primary--m ">
+    <a href="/" class="c-block__title-link u-theme--link-hover--dark">
+    World Church: Leaders Pray in Wake of Apparent North Korea Nuke Test
+    </a>
+    </h3>
+    <p class="c-block__description">Leaders of the Seventh-day Adventist world church united in prayer on Monday, October 9, in response to an apparent test of nuclear weapons by the Democratic People's Republic of Korea...</p>
+    </div>
+    <div class="c-block__meta u-theme--color--dark">
+    <span class="c-block__meta u-font--secondary--xs">Adventistreview.org</span>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    <nav class="pagination u-space--double--top can-be--dark" role="navigation">
+    <a href="?page=1" class="pagination__page pagination__prev u-theme--color--darker">
+    <span class="u-icon u-icon--m u-theme--path-fill--dark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-arrow__bracket--right</title><path d="M3.25,6.41l3.5,3.5L8.16,8.5,4.66,5l3.5-3.5L6.75.09l-3.5,3.5L1.84,5Z" fill="#9b9b9b"/></svg>
+    </span>
+    </a>
+    <a href="?page=1" rel="noindex, follow" class="pagination__page u-theme--color--darker">1</a>
+    <span class="pagination__page pagination__page--current u-theme--color--base">2</span>
+    <a href="?page=3" rel="noindex, follow" class="pagination__page u-theme--color--darker">3</a>
+    <a href="?page=4" rel="noindex, follow" class="pagination__page u-theme--color--darker">4</a>
+    <a href="?page=5" rel="noindex, follow" class="pagination__page u-theme--color--darker">5</a>
+    <a href="?page=6" rel="noindex, follow" class="pagination__page u-theme--color--darker">
+    6
+    </a>
+    <a href="?page=3" class="pagination__page pagination__next u-theme--color--darker">
+    <span class="u-icon u-icon--m u-theme--path-fill--dark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>Artboard 1</title><path d="M6.75,3.59,3.25.09,1.84,1.5,5.34,5,1.84,8.5,3.25,9.91l3.5-3.5L8.16,5Z" fill="#9b9b9b"/></svg>
+    </span>
+    </a>
+    </nav>
+    </div> 
+    </div>
+    </article>
+    </section>
+</main> 
 
 {% endblock %}
