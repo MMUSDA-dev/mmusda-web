@@ -12,10 +12,12 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
+# from django.db.models import AutoField
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from django.core.management import templates
 from django.template.context_processors import media
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -27,10 +29,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'me22pc=!rx)*17h&)sb&h-)^tl9u0f+z(ifwlxtdla)ad%-9yp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
+
+
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 # Application definition
 
@@ -78,6 +83,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'church.wsgi.application'
+
+
+
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

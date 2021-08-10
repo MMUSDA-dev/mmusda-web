@@ -21,6 +21,7 @@ from base import views as base_views
 from dashboard import views as dashboard_view
 from news import views as news_view
 from authenticate import views as authenticate_views
+from search import views as search_view
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.auth import views as auth_views
@@ -49,7 +50,12 @@ urlpatterns = [
 
     # news views
     path('news/', news_view.news_home, name='news'),
+
+    #search
+    path('search/', search_view.search, name='search'),
 ]
+
+handler404 = 'base.views.page_not_found_view'
 
 if settings.DEBUG:
     urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

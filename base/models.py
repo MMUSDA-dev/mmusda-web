@@ -22,12 +22,3 @@ class IndexDescription(models.Model):
     
     def __str__(self):
         return self.title
-
-# class Carousel(models.Model):
-#     title = models.CharField(max_length=200, blank=True)
-#     subtitle = models.CharField(max_length=200, blank=True)
-#     content = models.CharField(max_length=255, blank= True)
-#     image = models.ImageField(upload_to = 'meddia/carousel/')
-
-#     class Meta:
-#         verbose_name_plural = 'Carousel'
