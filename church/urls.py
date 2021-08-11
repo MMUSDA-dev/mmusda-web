@@ -55,7 +55,7 @@ urlpatterns = [
     path('search/', search_view.search, name='search'),
 ]
 
-handler404 = 'base.views.page_not_found_view'
+# handler404 = 'base.views.page_not_found_view'
 
 if settings.DEBUG:
     urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

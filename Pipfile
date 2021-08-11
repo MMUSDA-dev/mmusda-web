@@ -17,10 +17,12 @@ urllib3 = "*"
 Django = "*"
 Pillow = "*"
 psycopg2-binary = "*"
-django = "*"
 gunicorn = "*"
 django-heroku = "*"
 whitenoise = "*"
+boto3 = "*"
+django-storages = "*"
+django-cleanup = "*"
 
 [dev-packages]
 
