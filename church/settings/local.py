@@ -10,7 +10,7 @@ SECRET_KEY = 'me22pc=!rx)*17h&)sb&h-)^tl9u0f+z(ifwlxtdla)ad%-9yp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'http://frymn-church.herokuapp.com/']
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
