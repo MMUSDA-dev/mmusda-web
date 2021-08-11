@@ -5,8 +5,9 @@ from .models import Description, IndexDescription
 
 
 # Create your views here.
-# def page_not_found_view(request, exception):
-#     return render(request, '404.html')
+def error_404(request, exception):
+    data = {}
+    return render(request, 'base/404.html', data)
 
 
 def index(request):
