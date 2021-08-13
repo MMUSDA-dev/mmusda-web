@@ -43,7 +43,7 @@ DATABASES = {
 
 
 # Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = os.environ['SECRET']
 
 ALLOWED_HOSTS = ['https://frymn-church.herokuapp.com']
 
