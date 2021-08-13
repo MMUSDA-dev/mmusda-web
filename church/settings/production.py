@@ -2,6 +2,7 @@ import os
 import dj_database_url
 
 from .base import *
+from .amazon import *
 ROOT_URLCONF = 'church.urls'
 CORS_REPLACE_HTTPS_REFERER = True
 HOST_SCHEME = "https://"
@@ -30,8 +31,10 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 # Parse database connection url strings like psql://user:pass@127.0.0.1:8458/db
 
 
+
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASE=['default'].update(db_from_env)
+DATABASES['default'] = dj_database_url.parse('postgres://...', conn_max_age=600)
+# DATABASE['default'].update(db_from_env)= dj_database_url
 
 # DATABASES = {
 #     # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
