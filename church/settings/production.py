@@ -1,5 +1,5 @@
 import os
-import dj_database_url
+from . import dj_database_url
 
 from .base import *
 ROOT_URLCONF = 'church.urls'
@@ -21,7 +21,8 @@ Production Settings for Heroku
 
 # If using in your own project, update the project namespace below
 
-env = os.environ.get('DEBUG')
+# env = os.environ.get('DEBUG')
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 # False if not in os.environ
 # DEBUG = env('DEBUG')
@@ -30,7 +31,7 @@ env = os.environ.get('DEBUG')
 
 
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+DATABASES=['default'].update(db_from_env)
 
 # DATABASES = {
 #     # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
@@ -39,7 +40,7 @@ DATABASES['default'].update(db_from_env)
 
 
 # Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
-SECRET_KEY = env('SECRET')
+SECRET_KEY = os.environ('SECRET_KEY')
 
 ALLOWED_HOSTS = ['https://frymn-church.herokuapp.com']
 
