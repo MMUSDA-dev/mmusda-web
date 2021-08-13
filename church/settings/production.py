@@ -1,5 +1,5 @@
 import os
-from . import dj_database_url
+import dj_database_url
 
 from .base import *
 ROOT_URLCONF = 'church.urls'
@@ -31,7 +31,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES=['default'].update(db_from_env)
+DATABASE=['default'].update(db_from_env)
 
 # DATABASES = {
 #     # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
