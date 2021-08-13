@@ -32,14 +32,14 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'] = dj_database_url.parse('postgres://...', conn_max_age=600)
-# DATABASE['default'].update(db_from_env)= dj_database_url
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'] = dj_database_url.parse('postgres://', conn_max_age=600)
+# DATABASE['default'].update(db_from_env)= dj_database_url.parse('postgres://...', conn_max_age=600)
 
-# DATABASES = {
-#     # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
-#     'default': env.db(),
-# }
+DATABASES = {
+    # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
+    'default': dj_database_url.parse('postgres://', conn_max_age=600),
+}
 
 
 # Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
