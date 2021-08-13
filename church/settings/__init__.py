@@ -1,10 +1,10 @@
-try:
-    from .production import *
-except:
-    from .local import *
+# try:
+#     from .production import *
+# except:
+#     from .local import *
 
 
-# from .production import *
+from .production import *
 
 # import environ
 
