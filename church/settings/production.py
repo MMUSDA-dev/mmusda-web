@@ -38,7 +38,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 DATABASES = {
     # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
-    'default': dj_database_url.config(require_ssl = True, conn_max_age=600),
+    'default': dj_database_url.config(ssl_require = True, conn_max_age=600),
 }
 
 
