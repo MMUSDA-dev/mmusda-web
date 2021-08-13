@@ -1,4 +1,5 @@
-import environ
+import os
+import dj_database_url
 
 from .base import *
 ROOT_URLCONF = 'church.urls'
@@ -13,13 +14,6 @@ SECURE_HSTS_SECONDS = 1000000
 
 SECURE_FRAME_DENY = True
 
-# CACHES = {
-#     "default": {
-#          "BACKEND": "redis_cache.RedisCache",
-#          "LOCATION": env('REDIS_URL'),
-#     }
-# }
-
 
 """
 Production Settings for Heroku
@@ -27,25 +21,20 @@ Production Settings for Heroku
 
 # If using in your own project, update the project namespace below
 
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
+env = os.environ.get('DEBUG')
 
 # False if not in os.environ
-DEBUG = env('DEBUG')
+# DEBUG = env('DEBUG')
 
 # Parse database connection url strings like psql://user:pass@127.0.0.1:8458/db
-DATABASES = {
-    # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
-    'default': env.db(),
-}
 
-# CACHES = {
-#     # read os.environ['CACHE_URL'] and raises ImproperlyConfigured exception if not found
-#     'default': env.cache(),
-#     # read os.environ['REDIS_URL']
-#     'redis': env.cache('REDIS_URL')
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+# DATABASES = {
+#     # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
+#     'default': env.db(),
 # }
 
 
