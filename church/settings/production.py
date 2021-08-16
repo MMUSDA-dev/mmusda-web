@@ -22,8 +22,8 @@ Production Settings for Heroku
 
 # If using in your own project, update the project namespace below
 
-# env = os.environ.get('DEBUG')
-DEBUG = os.environ.get('DEBUG') 
+DEBUG = False
+# DEBUG = os.environ.get('DEBUG') 
 
 # False if not in os.environ
 # DEBUG = env('DEBUG')
