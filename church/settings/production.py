@@ -23,7 +23,7 @@ Production Settings for Heroku
 # If using in your own project, update the project namespace below
 
 # env = os.environ.get('DEBUG')
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = os.environ.get('DJANGO_DEBUG', '') = 'False'
 
 # False if not in os.environ
 # DEBUG = env('DEBUG')
@@ -35,6 +35,8 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 # db_from_env = dj_database_url.config(conn_max_age=500)
 # DATABASES['default'] = dj_database_url.parse('postgres://', conn_max_age=600)
 # DATABASE['default'].update(db_from_env)= dj_database_url.parse('postgres://...', conn_max_age=600)
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DATABASES = {
     # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
