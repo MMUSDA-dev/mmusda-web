@@ -6,8 +6,7 @@ from .models import Description, IndexDescription
 
 # Create your views here.
 def error_404(request, exception):
-    data = {}
-    return render(request, 'base/404.html', data)
+    return render(request, 'base/404.html')
 
 
 def index(request):
