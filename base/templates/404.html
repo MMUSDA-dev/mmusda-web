@@ -1,16 +1,28 @@
 {% extends 'base/base.html' %}
-{% block title %}Error Page Not Found{% endblock title %}
+{% block title %}Error_404{% endblock title %}
 {% load static %}
 {% block body %}
 
 <main class="l-main u-padding--double--bottom" role="main">
     <header class="c-page-header c-page-header__simple u-theme--background-color--dark ">
-    <div class="c-page-header__simple--inner u-padding">
-    <h1 class="c-page-header__title u-font--primary--xxl u-color--white">
-    Page Not Found
-    </h1>
-    </div>
+        <div class="c-page-header__simple--inner u-padding">
+            <h1 class="c-page-header__title u-font--primary--xxl u-color--white">
+            Page Not Found
+            </h1>
+        </div>
     </header> 
+    <div class="c-block c-block__text  u-theme--border-color--darker u-border--left u-spacing">
+        <h3 class="u-theme--color--darker u-font--primary--m">
+            <strong>The page is either missing or does not exist!</strong>
+        </h3>
+        <p class="c-block__body text">You can continue to enjoy the content of our website. click on the link below to continue having the enriching experience that the church brings to you in this perfect manner.</p>
+        <a href="/" class="c-block__button o-button o-button--outline">
+        Back home
+        <span class="u-icon u-icon--m u-path-fill--base u-space--half--left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>o-arrow__long--left</title><path d="M18.29,8.59l-3.5-3.5L13.38,6.5,15.88,9H.29v2H15.88l-2.5,2.5,1.41,1.41,3.5-3.5L19.71,10Z" fill="#9b9b9b"/></svg>
+        </span>
+        </a>
+        <div class="c-block__meta u-font--secondary--xs u-color--gray">Source: www.adventist.org</div>
+    </div>
 </main>
 
 {% endblock body%}
