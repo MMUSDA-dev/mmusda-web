@@ -66,7 +66,7 @@ body{
     }
     
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 768px){
 
     .left-side{
         width: 20vw !important;
