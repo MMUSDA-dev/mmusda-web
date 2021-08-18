@@ -51,21 +51,6 @@ body{
     margin-left: 4em;
 }
 
-
-@media screen and (min-width: 768px){
-    .left-side{
-        width: 50vw !important;
-    } 
-    
-    .left-side-img{
-        width: 50vw !important;
-    }
-
-    .right-side{
-        width: 50vw !important;
-    }
-    
-}
 @media screen and (max-width: 768px){
 
     .left-side{
