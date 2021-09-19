@@ -8,6 +8,9 @@ class News(models.Model):
     content = models.TextField()
     pub_date = models.DateField('date Published')
     pub_by = models.CharField('Published By', max_length=200, blank=True)
+    department = models.TextField()
+    img = models.ImageField()
+    slug = models.SlugField()
 
     class Meta:
         verbose_name_plural = 'News'

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
-from base.models import Description, IndexDescription
+from base.models import Description, IndexDescription, Carousel, Testimony
 from news.models import News
 
 
@@ -22,6 +22,8 @@ class NewsAdmin(admin.ModelAdmin):
 admin.site.register(Description, DescriptionAdmin)
 admin.site.register(IndexDescription, IndexDescriptionAdmin)
 admin.site.register(News, NewsAdmin)
+admin.site.register(Carousel)
+admin.site.register(Testimony)
 admin.site.site_header = 'North West Kenya Conference of the Seventh-day Adventists'
 admin.site.site_title = 'North West Kenya Conference'
 admin.site.index_title = 'Dashboard'

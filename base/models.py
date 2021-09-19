@@ -22,3 +22,22 @@ class IndexDescription(models.Model):
     
     def __str__(self):
         return self.title
+
+class Carousel(models.Model):
+    title = models.CharField(max_length=200)
+    sub_title = models.CharField(max_length=200)
+    content = models.TextField()
+    image = models.ImageField()
+    
+    class Meta:
+        verbose_name_plural = 'Carousel'
+
+class Testimony(models.Model):
+    title = models.CharField(max_length=200)
+    author = models.CharField(max_length=200)
+    content = models.CharField(max_length=200)
+    image = models.ImageField()
+
+    class Meta:
+        verbose_name_plural = 'Testimonies'
+

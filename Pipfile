@@ -25,6 +25,7 @@ django-storages = "*"
 django-cleanup = "*"
 environ = "*"
 dj-database-url = "*"
+django-image-cropping = "*"
 
 [dev-packages]
 
