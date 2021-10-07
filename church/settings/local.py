@@ -16,18 +16,18 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'frymn-church.herokuapp.com']
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+# #     'default': {
+# #         'ENGINE': 'django.db.backends.sqlite3',
+# #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+# #     }
+# # }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'church',
+            'NAME': 'pharm',
             'USER': 'postgres',
             'PASSWORD': 'Admin',
             'HOST': 'localhost',

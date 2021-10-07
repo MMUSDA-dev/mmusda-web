@@ -23,7 +23,7 @@ class IndexDescription(models.Model):
     def __str__(self):
         return self.title
 
-class Carousel(models.Model):
+class CarouselContent(models.Model):
     title = models.CharField(max_length=200)
     sub_title = models.CharField(max_length=200)
     content = models.TextField()
@@ -31,8 +31,11 @@ class Carousel(models.Model):
     
     class Meta:
         verbose_name_plural = 'Carousel'
+        
+    def __str__(self):
+        return self.title
 
-class Testimony(models.Model):
+class TestimonialData(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
     content = models.CharField(max_length=200)
@@ -40,4 +43,7 @@ class Testimony(models.Model):
 
     class Meta:
         verbose_name_plural = 'Testimonies'
+
+    def __str__(self):
+        return self.title
 

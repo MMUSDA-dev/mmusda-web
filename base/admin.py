@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
-from base.models import Description, IndexDescription, Carousel, Testimony
-from news.models import News
+from base.models import Description, IndexDescription, CarouselContent, TestimonialData
+from news.models import blogcontent
 
 
 class DescriptionAdmin(admin.ModelAdmin):
@@ -15,15 +15,17 @@ class IndexDescriptionAdmin(admin.ModelAdmin):
 class NewsAdmin(admin.ModelAdmin):
     list_display = ['title', 'pub_date', 'pub_by']
     list_filter = ['pub_date', 'pub_by']
-    search_fields = ['titla', 'pub_by', 'Pub_date']
+    search_fields = ['title', 'pub_by', 'Pub_date']
+
+
     
 
 # Register your models here.
 admin.site.register(Description, DescriptionAdmin)
 admin.site.register(IndexDescription, IndexDescriptionAdmin)
-admin.site.register(News, NewsAdmin)
-admin.site.register(Carousel)
-admin.site.register(Testimony)
+admin.site.register(blogcontent, NewsAdmin)
+admin.site.register(CarouselContent)
+admin.site.register(TestimonialData)
 admin.site.site_header = 'North West Kenya Conference of the Seventh-day Adventists'
 admin.site.site_title = 'North West Kenya Conference'
 admin.site.index_title = 'Dashboard'
