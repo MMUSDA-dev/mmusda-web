@@ -26,6 +26,7 @@ django-cleanup = "*"
 environ = "*"
 dj-database-url = "*"
 django-image-cropping = "*"
+pydocs = "*"
 
 [dev-packages]
 

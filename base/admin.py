@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from base.models import Description, IndexDescription, CarouselContent, TestimonialData
 from news.models import blogcontent
-
+from departments.models import Department, Department_head
 
 class DescriptionAdmin(admin.ModelAdmin):
     list_display = [ 'title', 'content']
@@ -26,6 +26,8 @@ admin.site.register(IndexDescription, IndexDescriptionAdmin)
 admin.site.register(blogcontent, NewsAdmin)
 admin.site.register(CarouselContent)
 admin.site.register(TestimonialData)
+admin.site.register(Department)
+admin.site.register(Department_head)
 admin.site.site_header = 'North West Kenya Conference of the Seventh-day Adventists'
 admin.site.site_title = 'North West Kenya Conference'
 admin.site.index_title = 'Dashboard'
