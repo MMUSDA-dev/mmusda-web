@@ -16,6 +16,7 @@ class NewsAdmin(admin.ModelAdmin):
     list_display = ['title', 'pub_date', 'pub_by']
     list_filter = ['pub_date', 'pub_by']
     search_fields = ['title', 'pub_by', 'Pub_date']
+    prepopulated_fields = {'slug': ('title',)}
 
 
     
@@ -28,7 +29,9 @@ admin.site.register(CarouselContent)
 admin.site.register(TestimonialData)
 admin.site.register(Department)
 admin.site.register(Department_head)
-admin.site.site_header = 'North West Kenya Conference of the Seventh-day Adventists'
-admin.site.site_title = 'North West Kenya Conference'
+
+#admin panel header settings
+admin.site.site_header = 'Seventh-day Adventist Church Multimedia University'
+admin.site.site_title = 'MMUSDA'
 admin.site.index_title = 'Dashboard'
 admin.site.unregister(Group)

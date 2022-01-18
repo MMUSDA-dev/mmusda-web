@@ -1,6 +1,7 @@
 from django.db import models
 from departments.models import Department
 from django.db.models.deletion import CASCADE
+# from django.db.models import parmalink
 
 
 # Create your models here.
@@ -17,5 +18,10 @@ class blogcontent(models.Model):
     class Meta:
         verbose_name_plural = 'News'
 
-
+    def __unicode__(self):
+        return '%s' %self.title
+    
+    # @parmalink
+    def get_absolute_url(self):
+        return('view_news_post', None, {'slug': self.slug})
     
