@@ -13,3 +13,9 @@ def news_home(request):
     # }
     # return HttpResponse(template.render(context, request))
     return render(request, 'news/home.html')
+
+def feeds(request):
+    return render(request, 'news/feeds.html')
+
+def article(request):
+    return render(request, 'news/article.html')

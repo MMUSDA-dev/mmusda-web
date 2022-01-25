@@ -50,6 +50,8 @@ urlpatterns = [
 
     # news views
     path('news/', news_view.news_home, name='news'),
+    path('all_feeds/', news_view.feeds, name='feeds'),
+    path('article', news_view.article, name= 'article'),
 
     #search
     path('search/', search_view.search, name='search'),

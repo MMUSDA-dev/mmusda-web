@@ -32,6 +32,11 @@
             <p class="c-block__body u-theme--color--lighter">I Will Go is “a tool to help the Church be more focused and effective in performing critical tasks. This strategic plan is rooted in the Great Commission found in Matthew 28, which calls Jesus’ followers to go and make disciples of all nations.”</p>
             <a href="https://iwillgo2020.org" class="o-button o-button--lighter" target="blank">Read More</a>
         </div>
+      
+        {% include 'sections/feed-post.html' %}
+
+        {% include 'sections/testimonies-media.html' %}
+
         {% if latest_index_view %}
         {% for view in latest_index_view%}
         <section class="l-grid l-grid--7-col u-shift--left--1-col--at-xxlarge l-grid-wrap--6-of-7 u-spacing--double--until-large">
@@ -57,8 +62,7 @@
             </div>
         {% endif%}
         
-        {% include 'sections/testimonies-media.html' %} 
-        {% include 'sections/feed-post.html' %}
+   
     </main>
 
 
